@@ -30,6 +30,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
 
     .logo img {
@@ -42,7 +43,6 @@
       gap: 30px;
       margin: 0;
       padding: 0;
-      position: relative;
     }
 
     .nav-links li {
@@ -62,14 +62,10 @@
     }
 
     .mega-dropdown {
-      opacity: 0;
-      transform: translateY(-10px);
-      pointer-events: none;
-      transition: all 0.3s ease;
+      display: none;
       position: absolute;
       top: 100%;
       left: 0;
-      right: 0;
       width: 100vw;
       background-color: #f9f9f9;
       border-top: 1px solid #eee;
@@ -77,10 +73,8 @@
       z-index: 999;
     }
 
-    .nav-links:hover .mega-dropdown {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
+    header:hover .mega-dropdown {
+      display: block;
     }
 
     .dropdown-inner {
@@ -164,34 +158,34 @@
         <li><a href="contents.html">콘텐츠</a></li>
         <li><a href="resources.html">자료</a></li>
         <li><a href="community.html">문항공모</a></li>
-        <div class="mega-dropdown">
-          <div class="dropdown-inner">
-            <div class="dropdown-column">
-              <h4>채용</h4>
-              <a href="#">회사문화</a>
-              <a href="#">채용 공고</a>
-            </div>
-            <div class="dropdown-column">
-              <h4>콘텐츠 - 교재</h4>
-              <a href="#">한시수</a>
-              <a href="#">한완수</a>
-              <a href="#">한완기</a>
-              <a href="#">이해원 N제</a>
-              <a href="#">이해원 모의고사</a>
-            </div>
-            <div class="dropdown-column">
-              <h4>콘텐츠 - 포만한</h4>
-              <a href="#">포만한</a>
-            </div>
-            <div class="dropdown-column">
-              <h4>자료</h4>
-              <a href="#">정답표</a>
-              <a href="#">정오표</a>
-              <a href="#">선생님자료</a>
-            </div>
-          </div>
-        </div>
       </ul>
+    </div>
+    <div class="mega-dropdown">
+      <div class="dropdown-inner">
+        <div class="dropdown-column">
+          <h4>채용</h4>
+          <a href="#">회사문화</a>
+          <a href="#">채용 공고</a>
+        </div>
+        <div class="dropdown-column">
+          <h4>콘텐츠 - 교재</h4>
+          <a href="#">한시수</a>
+          <a href="#">한완수</a>
+          <a href="#">한완기</a>
+          <a href="#">이해원 N제</a>
+          <a href="#">이해원 모의고사</a>
+        </div>
+        <div class="dropdown-column">
+          <h4>콘텐츠 - 포만한</h4>
+          <a href="#">포만한</a>
+        </div>
+        <div class="dropdown-column">
+          <h4>자료</h4>
+          <a href="#">정답표</a>
+          <a href="#">정오표</a>
+          <a href="#">선생님자료</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -211,5 +205,4 @@
   </main>
 </body>
 </html>
-
 
