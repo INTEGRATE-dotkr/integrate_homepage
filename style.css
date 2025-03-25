@@ -1,0 +1,67 @@
+/* 웹폰트 추가 (Google Fonts - Pretendard 대체용) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+}
+
+/* 상단 메뉴 */
+.navbar {
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 8px 4px;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.nav-links li a:hover {
+  color: #00c6ad;
+  border-bottom: 2px solid #00c6ad;
+}
+
+/* 본문 */
+main {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+}
