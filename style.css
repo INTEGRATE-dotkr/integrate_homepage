@@ -1,67 +1,126 @@
-/* 웹폰트 추가 (Google Fonts - Pretendard 대체용) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
+/* 기본 설정 */
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  color: #222;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
 }
 
-/* 상단 메뉴 */
-.navbar {
-  background-color: #1a1a1a;
+/* 로고 및 헤더 */
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
-.logo {
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: 600;
+.logo img {
+  height: 28px;
 }
 
-.nav-links {
+/* 네비게이션 */
+.main-nav ul {
   list-style: none;
   display: flex;
-  gap: 28px;
+  gap: 40px;
   margin: 0;
   padding: 0;
 }
 
-.nav-links li a {
+.main-nav ul li a {
   text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
-  padding: 8px 4px;
-  transition: color 0.2s, border-bottom 0.2s;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
 }
 
-.nav-links li a:hover {
-  color: #00c6ad;
-  border-bottom: 2px solid #00c6ad;
+.main-nav ul li a:hover {
+  color: #7542b1;
+}
+
+/* 드롭다운 전체 래퍼 */
+.dropdown-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 30px 0;
+  gap: 80px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+header:hover .dropdown-wrapper {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 120px;
+}
+
+.dropdown-column a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.dropdown-column a:hover {
+  color: #7542b1;
 }
 
 /* 본문 */
 main {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: left;
 }
 
-h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
+.intro h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #222;
 }
 
-p {
-  font-size: 18px;
-  color: #555;
+.intro p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .main-nav ul {
+    gap: 20px;
+  }
+  .dropdown-wrapper {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+  .dropdown-column {
+    min-width: 100%;
+  }
 }
