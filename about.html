@@ -13,7 +13,6 @@
       color: #222;
     }
 
-    /* 헤더 스타일 */
     header {
       background-color: #ffffff;
       padding: 24px 60px;
@@ -41,6 +40,10 @@
       padding: 0;
     }
 
+    .nav-links li {
+      position: relative;
+    }
+
     .nav-links li a {
       text-decoration: none;
       color: #222;
@@ -49,6 +52,42 @@
     }
 
     .nav-links li a:hover {
+      color: #0070f3;
+    }
+
+    /* 드롭다운 메뉴 */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 36px;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px 30px;
+      border-radius: 8px;
+      min-width: 200px;
+      white-space: nowrap;
+    }
+
+    .nav-links li:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown h4 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #0070f3;
+    }
+
+    .dropdown a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      padding: 5px 0;
+      font-size: 14px;
+    }
+
+    .dropdown a:hover {
       color: #0070f3;
     }
 
@@ -94,7 +133,17 @@
       <li><a href="index.html">홈</a></li>
       <li><a href="about.html">회사 소개</a></li>
       <li><a href="recruit.html">채용 안내</a></li>
-      <li><a href="contents.html">콘텐츠 소개</a></li>
+      <li>
+        <a href="contents.html">콘텐츠 소개</a>
+        <div class="dropdown">
+          <h4>개념서</h4>
+          <a href="#">한시수</a>
+          <h4>실전서</h4>
+          <a href="#">한완기</a>
+          <h4>종합서</h4>
+          <a href="#">한완수</a>
+        </div>
+      </li>
       <li><a href="resources.html">자료실</a></li>
       <li><a href="community.html">커뮤니티</a></li>
     </ul>
