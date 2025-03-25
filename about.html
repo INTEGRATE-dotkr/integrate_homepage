@@ -62,7 +62,8 @@
     }
 
     .mega-dropdown {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
       position: absolute;
       top: 100%;
       left: 0;
@@ -71,11 +72,14 @@
       border-top: 1px solid #eee;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       z-index: 999;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
     }
 
     header:hover .mega-dropdown {
-      display: flex;
-      justify-content: center;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
     }
 
     .dropdown-inner {
@@ -88,14 +92,9 @@
     }
 
     .dropdown-column {
+      display: flex;
+      flex-direction: column;
       min-width: 160px;
-    }
-
-    .dropdown-column h4 {
-      margin-bottom: 12px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #0070f3;
     }
 
     .dropdown-column a {
@@ -164,12 +163,10 @@
     <div class="mega-dropdown">
       <div class="dropdown-inner">
         <div class="dropdown-column">
-          <h4>채용</h4>
           <a href="#">회사문화</a>
           <a href="#">채용 공고</a>
         </div>
         <div class="dropdown-column">
-          <h4>콘텐츠</h4>
           <a href="#">한시수</a>
           <a href="#">한완수</a>
           <a href="#">한완기</a>
@@ -178,7 +175,6 @@
           <a href="#">포만한</a>
         </div>
         <div class="dropdown-column">
-          <h4>자료</h4>
           <a href="#">정답표</a>
           <a href="#">정오표</a>
           <a href="#">선생님자료</a>
@@ -203,3 +199,4 @@
   </main>
 </body>
 </html>
+
