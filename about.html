@@ -86,15 +86,14 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 30px 80px;
-      display: flex;
-      justify-content: flex-start;
-      gap: 60px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 40px;
     }
 
     .dropdown-column {
       display: flex;
       flex-direction: column;
-      min-width: 160px;
     }
 
     .dropdown-column a {
@@ -162,6 +161,7 @@
     </div>
     <div class="mega-dropdown">
       <div class="dropdown-inner">
+        <div class="dropdown-column"></div> <!-- 회사소개: 하위 항목 없음 -->
         <div class="dropdown-column">
           <a href="#">회사문화</a>
           <a href="#">채용 공고</a>
@@ -179,6 +179,7 @@
           <a href="#">정오표</a>
           <a href="#">선생님자료</a>
         </div>
+        <div class="dropdown-column"></div> <!-- 문항공모: 하위 항목 없음 -->
       </div>
     </div>
   </header>
@@ -199,4 +200,3 @@
   </main>
 </body>
 </html>
-
