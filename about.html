@@ -31,7 +31,7 @@
     }
 
     .logo img {
-      height: 32px;
+      height: 40px;
     }
 
     .nav-links {
@@ -50,6 +50,7 @@
       text-decoration: none;
       color: #222;
       font-weight: 500;
+      font-size: 16px;
       transition: color 0.2s;
     }
 
@@ -67,12 +68,8 @@
       left: 0;
       width: 100%;
       background-color: #f9f9f9;
-      padding: 30px 80px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       border-top: 1px solid #eee;
-      display: flex;
-      justify-content: center;
-      gap: 60px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       z-index: 999;
     }
 
@@ -80,6 +77,15 @@
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
+    }
+
+    .dropdown-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 80px;
+      display: flex;
+      justify-content: flex-start;
+      gap: 60px;
     }
 
     .dropdown-column {
@@ -154,13 +160,15 @@
         <li>
           <a href="contents.html">콘텐츠 소개</a>
           <div class="dropdown">
-            <div class="dropdown-column">
-              <h4>INTEGRATE 시리즈</h4>
-              <a href="#">한시수</a>
-              <a href="#">한완수</a>
-              <a href="#">한완기</a>
-              <a href="#">이해원 N제</a>
-              <a href="#">이해원 모의고사</a>
+            <div class="dropdown-inner">
+              <div class="dropdown-column">
+                <h4>INTEGRATE 시리즈</h4>
+                <a href="#">한시수</a>
+                <a href="#">한완수</a>
+                <a href="#">한완기</a>
+                <a href="#">이해원 N제</a>
+                <a href="#">이해원 모의고사</a>
+              </div>
             </div>
           </div>
         </li>
@@ -186,4 +194,3 @@
   </main>
 </body>
 </html>
-
