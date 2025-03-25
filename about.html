@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>회사 소개 | INTEGRATE</title>
+  <title>회사소개 | INTEGRATE</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Noto Sans KR', sans-serif;
       background-color: #f5f5f5;
       color: #222;
     }
@@ -40,6 +42,7 @@
       gap: 30px;
       margin: 0;
       padding: 0;
+      position: relative;
     }
 
     .nav-links li {
@@ -58,7 +61,7 @@
       color: #0070f3;
     }
 
-    .dropdown {
+    .mega-dropdown {
       opacity: 0;
       transform: translateY(-10px);
       pointer-events: none;
@@ -74,7 +77,7 @@
       z-index: 999;
     }
 
-    .nav-links li:hover .dropdown {
+    .nav-links:hover .mega-dropdown {
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
@@ -85,12 +88,19 @@
       margin: 0 auto;
       padding: 30px 80px;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       gap: 60px;
     }
 
     .dropdown-column {
       min-width: 160px;
+    }
+
+    .dropdown-column h4 {
+      margin-bottom: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #0070f3;
     }
 
     .dropdown-column a {
@@ -149,25 +159,38 @@
         </a>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html">홈</a></li>
-        <li><a href="about.html">회사 소개</a></li>
-        <li><a href="recruit.html">채용 안내</a></li>
-        <li>
-          <a href="contents.html">콘텐츠 소개</a>
-          <div class="dropdown">
-            <div class="dropdown-inner">
-              <div class="dropdown-column">
-                <a href="#">한시수</a>
-                <a href="#">한완수</a>
-                <a href="#">한완기</a>
-                <a href="#">이해원 N제</a>
-                <a href="#">이해원 모의고사</a>
-              </div>
+        <li><a href="about.html">회사소개</a></li>
+        <li><a href="recruit.html">채용</a></li>
+        <li><a href="contents.html">콘텐츠</a></li>
+        <li><a href="resources.html">자료</a></li>
+        <li><a href="community.html">문항공모</a></li>
+        <div class="mega-dropdown">
+          <div class="dropdown-inner">
+            <div class="dropdown-column">
+              <h4>채용</h4>
+              <a href="#">회사문화</a>
+              <a href="#">채용 공고</a>
+            </div>
+            <div class="dropdown-column">
+              <h4>콘텐츠 - 교재</h4>
+              <a href="#">한시수</a>
+              <a href="#">한완수</a>
+              <a href="#">한완기</a>
+              <a href="#">이해원 N제</a>
+              <a href="#">이해원 모의고사</a>
+            </div>
+            <div class="dropdown-column">
+              <h4>콘텐츠 - 포만한</h4>
+              <a href="#">포만한</a>
+            </div>
+            <div class="dropdown-column">
+              <h4>자료</h4>
+              <a href="#">정답표</a>
+              <a href="#">정오표</a>
+              <a href="#">선생님자료</a>
             </div>
           </div>
-        </li>
-        <li><a href="resources.html">자료실</a></li>
-        <li><a href="community.html">커뮤니티</a></li>
+        </div>
       </ul>
     </div>
   </header>
@@ -188,4 +211,5 @@
   </main>
 </body>
 </html>
+
 
