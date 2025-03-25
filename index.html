@@ -9,35 +9,53 @@
 <body>
   <header>
     <div class="container">
-      <div class="logo"><img src="integrate_logo1.png" alt="INTEGRATE 로고" /></div>
+      <div class="logo">
+        <img src="integrate_logo1.png" alt="INTEGRATE 로고" />
+      </div>
       <nav class="main-nav">
         <ul>
-          <li><a href="about.html">회사소개</a></li>
-          <li><a href="recruit.html">채용</a></li>
-          <li><a href="contents.html">콘텐츠</a></li>
+          <!-- 1. 회사소개 -->
+          <li>
+            <a href="about.html">회사소개</a>
+            <!-- 회사소개 하위 메뉴 -->
+            <ul class="dropdown-menu">
+              <li><a href="#">회사문화</a></li>
+              <li><a href="#">채용 공고</a></li>
+            </ul>
+          </li>
+
+          <!-- 2. 채용 -->
+          <li>
+            <a href="recruit.html">채용</a>
+            <!-- 채용 하위 메뉴 -->
+            <ul class="dropdown-menu">
+              <li><a href="#">한시수</a></li>
+              <li><a href="#">한완수</a></li>
+              <li><a href="#">한완기</a></li>
+              <li><a href="#">이해원 N제</a></li>
+              <li><a href="#">이해원 모의고사</a></li>
+              <li><a href="#">포만한</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. 콘텐츠 -->
+          <li>
+            <a href="contents.html">콘텐츠</a>
+            <!-- 콘텐츠 하위 메뉴 -->
+            <ul class="dropdown-menu">
+              <li><a href="#">정답표</a></li>
+              <li><a href="#">정오표</a></li>
+              <li><a href="#">선생님자료</a></li>
+            </ul>
+          </li>
+
+          <!-- 4. 자료 -->
           <li><a href="resources.html">자료</a></li>
+
+          <!-- 5. 문항공모 -->
           <li><a href="community.html">문항공모</a></li>
         </ul>
       </nav>
-    </div>
-    <div class="dropdown-wrapper">
-      <div class="dropdown-column">
-        <a href="#">회사문화</a>
-        <a href="#">채용 공고</a>
-      </div>
-      <div class="dropdown-column">
-        <a href="#">한시수</a>
-        <a href="#">한완수</a>
-        <a href="#">한완기</a>
-        <a href="#">이해원 N제</a>
-        <a href="#">이해원 모의고사</a>
-        <a href="#">포만한</a>
-      </div>
-      <div class="dropdown-column">
-        <a href="#">정답표</a>
-        <a href="#">정오표</a>
-        <a href="#">선생님자료</a>
-      </div>
     </div>
   </header>
 
@@ -49,4 +67,5 @@
     </div>
   </main>
 </body>
+</html>
 </html>
