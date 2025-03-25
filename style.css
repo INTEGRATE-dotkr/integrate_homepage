@@ -50,12 +50,11 @@ header {
 
 /* 드롭다운 전체 래퍼 */
 .dropdown-wrapper {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
-  padding: 30px 0;
-  gap: 80px;
+  padding: 30px 60px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -64,6 +63,7 @@ header {
   left: 0;
   width: 100%;
   pointer-events: none;
+  box-sizing: border-box;
 }
 
 header:hover .dropdown-wrapper {
@@ -76,7 +76,7 @@ header:hover .dropdown-wrapper {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  min-width: 120px;
+  align-items: flex-start;
 }
 
 .dropdown-column a {
@@ -116,7 +116,7 @@ main {
     gap: 20px;
   }
   .dropdown-wrapper {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     padding: 20px;
     gap: 30px;
   }
