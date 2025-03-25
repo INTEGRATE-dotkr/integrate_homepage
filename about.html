@@ -40,8 +40,8 @@
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 40px;
-      margin: 0;
+      gap: 36px;
+      margin: 0 0 0 40px;
       padding: 0;
     }
 
@@ -61,39 +61,52 @@
       color: #0070f3;
     }
 
-    .dropdown-menu {
+    .mega-dropdown {
       display: none;
       position: absolute;
       top: 100%;
       left: 0;
+      width: 100vw;
       background-color: #f9f9f9;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      padding: 20px 30px;
       border-top: 1px solid #eee;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       z-index: 999;
-      min-width: 200px;
     }
 
-    .nav-links li:hover .dropdown-menu {
-      display: block;
+    header:hover .mega-dropdown {
+      display: flex;
+      justify-content: center;
     }
 
-    .dropdown-title {
-      font-weight: 600;
+    .dropdown-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 80px;
+      display: flex;
+      justify-content: flex-start;
+      gap: 60px;
+    }
+
+    .dropdown-column {
+      min-width: 160px;
+    }
+
+    .dropdown-column h4 {
+      margin-bottom: 12px;
       font-size: 15px;
+      font-weight: 600;
       color: #0070f3;
-      margin-bottom: 10px;
     }
 
-    .dropdown-menu a {
+    .dropdown-column a {
       display: block;
       text-decoration: none;
       color: #333;
-      padding: 5px 0;
+      padding: 6px 0;
       font-size: 14px;
     }
 
-    .dropdown-menu a:hover {
+    .dropdown-column a:hover {
       color: #0070f3;
     }
 
@@ -142,42 +155,35 @@
       </div>
       <ul class="nav-links">
         <li><a href="about.html">회사소개</a></li>
-
-        <li>
-          <a href="recruit.html">채용</a>
-          <div class="dropdown-menu">
-            <div class="dropdown-title">채용</div>
-            <a href="#">회사문화</a>
-            <a href="#">채용 공고</a>
-          </div>
-        </li>
-
-        <li>
-          <a href="contents.html">콘텐츠</a>
-          <div class="dropdown-menu">
-            <div class="dropdown-title">교재</div>
-            <a href="#">한시수</a>
-            <a href="#">한완수</a>
-            <a href="#">한완기</a>
-            <a href="#">이해원 N제</a>
-            <a href="#">이해원 모의고사</a>
-            <div class="dropdown-title" style="margin-top: 10px;">포만한</div>
-            <a href="#">포만한</a>
-          </div>
-        </li>
-
-        <li>
-          <a href="resources.html">자료</a>
-          <div class="dropdown-menu">
-            <div class="dropdown-title">자료</div>
-            <a href="#">정답표</a>
-            <a href="#">정오표</a>
-            <a href="#">선생님자료</a>
-          </div>
-        </li>
-
+        <li><a href="recruit.html">채용</a></li>
+        <li><a href="contents.html">콘텐츠</a></li>
+        <li><a href="resources.html">자료</a></li>
         <li><a href="community.html">문항공모</a></li>
       </ul>
+    </div>
+    <div class="mega-dropdown">
+      <div class="dropdown-inner">
+        <div class="dropdown-column">
+          <h4>채용</h4>
+          <a href="#">회사문화</a>
+          <a href="#">채용 공고</a>
+        </div>
+        <div class="dropdown-column">
+          <h4>콘텐츠</h4>
+          <a href="#">한시수</a>
+          <a href="#">한완수</a>
+          <a href="#">한완기</a>
+          <a href="#">이해원 N제</a>
+          <a href="#">이해원 모의고사</a>
+          <a href="#">포만한</a>
+        </div>
+        <div class="dropdown-column">
+          <h4>자료</h4>
+          <a href="#">정답표</a>
+          <a href="#">정오표</a>
+          <a href="#">선생님자료</a>
+        </div>
+      </div>
     </div>
   </header>
 
