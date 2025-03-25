@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* 로고 및 헤더 */
+/* 헤더 및 로고 */
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
@@ -28,7 +28,7 @@ header {
   height: 28px;
 }
 
-/* 네비게이션 */
+/* 네비게이션 기본 스타일 */
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -37,6 +37,12 @@ header {
   padding: 0;
 }
 
+/* 상위 메뉴(li) 기본 */
+.main-nav ul li {
+  position: relative; /* 서브메뉴 절대 배치를 위해 position: relative */
+}
+
+/* 상위 메뉴 링크 */
 .main-nav ul li a {
   text-decoration: none;
   color: #222;
@@ -48,49 +54,45 @@ header {
   color: #7542b1;
 }
 
-/* 드롭다운 전체 래퍼 */
-.dropdown-wrapper {
-  display: flex;
-  justify-content: space-between;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 30px 0;
-  gap: 60px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
+/* 드롭다운 메뉴(하위 ul) 기본적으로 숨김 */
+.dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: 100%; /* li 바로 아래 */
   left: 0;
-  width: 100%;
-  pointer-events: none;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 10px 0;
+  min-width: 140px;
+  display: none; /* 처음에는 보이지 않도록 */
+  z-index: 999;
 }
 
-header:hover .dropdown-wrapper {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+/* li 위에 마우스를 올렸을 때(dropdown-menu) 보이기 */
+.main-nav ul li:hover .dropdown-menu {
+  display: block;
 }
 
-.dropdown-column {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-width: 120px;
+/* 드롭다운 메뉴 내부 항목 */
+.dropdown-menu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.dropdown-column a {
-  text-decoration: none;
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 16px;
   color: #555;
   font-size: 14px;
   transition: color 0.2s ease;
+  text-decoration: none;
 }
 
-.dropdown-column a:hover {
+.dropdown-menu li a:hover {
   color: #7542b1;
 }
 
-/* 본문 */
+/* 본문 영역 */
 main {
   max-width: 800px;
   margin: 60px auto;
@@ -111,16 +113,19 @@ main {
   color: #444;
 }
 
+/* 반응형 예시 */
 @media (max-width: 768px) {
   .main-nav ul {
     gap: 20px;
   }
-  .dropdown-wrapper {
-    flex-direction: column;
-    padding: 20px;
-    gap: 30px;
+  /* 모바일에서 드롭다운 메뉴는 상황에 따라 토글(햄버거)로 바꾸거나
+     그대로 펼쳐지게 할 수도 있음 */
+  .dropdown-menu {
+    position: static;
+    border: none;
+    padding: 0;
   }
-  .dropdown-column {
-    min-width: 100%;
+  .main-nav ul li:hover .dropdown-menu {
+    display: block;
   }
 }
