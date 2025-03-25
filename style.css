@@ -50,11 +50,12 @@ header {
 
 /* 드롭다운 전체 래퍼 */
 .dropdown-wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  justify-content: center;
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
-  padding: 30px 60px;
+  padding: 30px 0;
+  column-gap: 120px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -63,7 +64,6 @@ header {
   left: 0;
   width: 100%;
   pointer-events: none;
-  box-sizing: border-box;
 }
 
 header:hover .dropdown-wrapper {
@@ -75,8 +75,8 @@ header:hover .dropdown-wrapper {
 .dropdown-column {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
 }
 
 .dropdown-column a {
@@ -95,28 +95,22 @@ main {
   max-width: 800px;
   margin: 60px auto;
   padding: 0 20px;
-  text-align: left;
+  text-align: center;
 }
 
-.intro h1 {
-  font-size: 26px;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.intro p {
+.intro {
   font-size: 16px;
   line-height: 1.7;
-  margin-bottom: 16px;
   color: #444;
 }
 
+/* 반응형 */
 @media (max-width: 768px) {
   .main-nav ul {
     gap: 20px;
   }
   .dropdown-wrapper {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     padding: 20px;
     gap: 30px;
   }
