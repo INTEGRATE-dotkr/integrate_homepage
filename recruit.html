@@ -1,27 +1,182 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>채용 안내 | INTEGRATE</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INTEGRATE 채용</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    .recruit-nav {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .logo img {
+      height: 20px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #111;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .nav-links li a:hover {
+      color: #7542b1;
+    }
+
+    .section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      padding: 40px 20px;
+    }
+
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h1,
+    .section h2,
+    .section p {
+      max-width: 700px;
+      margin: 12px 0;
+    }
+
+    .section ul {
+      text-align: left;
+      max-width: 700px;
+      margin: 20px auto;
+      padding-left: 20px;
+    }
+
+    .section li {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    .cta-button {
+      margin-top: 24px;
+      padding: 12px 24px;
+      background-color: #7542b1;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: background-color 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #5f3393;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">INTEGRATE</div>
+  <nav class="recruit-nav">
+    <div class="navbar-container">
+      <div class="logo">
+        <img src="integrate_logo1.png" alt="INTEGRATE 로고">
+      </div>
       <ul class="nav-links">
-        <li><a href="index.html">홈</a></li>
-        <li><a href="about.html">회사 소개</a></li>
-        <li><a href="recruit.html">채용 안내</a></li>
-        <li><a href="contents.html">콘텐츠 소개</a></li>
-        <li><a href="resources.html">자료실</a></li>
-        <li><a href="community.html">커뮤니티</a></li>
+        <li><a href="#home">홈</a></li>
+        <li><a href="#office">오피스투어</a></li>
+        <li><a href="#culture">문화</a></li>
+        <li><a href="#benefit">복지</a></li>
+        <li><a href="#jobs">채용공고</a></li>
+        <li><a href="#faq">자주 묻는 질문</a></li>
       </ul>
-    </nav>
-  </header>
-  <main style="padding: 40px; text-align: center;">
-    <h1>채용 안내</h1>
-    <p>이 페이지는 현재 준비 중입니다.</p>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section home" id="home">
+      <h1>인터그레이트는 수학 교육의<br>기준을 새롭게 만듭니다.</h1>
+      <p>본질을 다시 설계하고, 누구도 시도하지 않은 방식으로.<br>
+      이 변화의 한가운데에 설 당신을 기다립니다.</p>
+      <a href="#jobs" class="cta-button">채용공고 보기</a>
+    </section>
+
+    <section class="section" id="office">
+      <h2>오피스투어</h2>
+      <p>(오피스 환경, 사진 또는 분위기 설명 예정)</p>
+    </section>
+
+    <section class="section" id="culture">
+      <h2>업무문화</h2>
+      <p>(협업 방식, 유연성, 커뮤니케이션 문화 등)</p>
+    </section>
+
+    <section class="section" id="benefit">
+      <h2>복리후생</h2>
+      <p>(휴가, 교육비, 식대, 복지제도 등 소개 예정)</p>
+    </section>
+
+    <section class="section" id="jobs">
+      <h2>채용공고</h2>
+      <p>(현재 모집 중인 포지션 목록 및 상세 내용)</p>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>자주 묻는 질문</h2>
+      <p>(지원자들이 자주 궁금해하는 내용을 Q&A 형식으로 제공)</p>
+    </section>
   </main>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
