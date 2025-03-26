@@ -1,27 +1,164 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>콘텐츠 소개 | INTEGRATE</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>콘텐츠</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    section {
+      margin-bottom: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    section.reverse {
+      flex-direction: row-reverse;
+    }
+    .text {
+      flex: 1 1 500px;
+    }
+    .text h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .text p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .image {
+      flex: 1 1 400px;
+    }
+    .image img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .intro h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .intro p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">INTEGRATE</div>
-      <ul class="nav-links">
-        <li><a href="index.html">홈</a></li>
-        <li><a href="about.html">회사 소개</a></li>
-        <li><a href="recruit.html">채용 안내</a></li>
-        <li><a href="contents.html">콘텐츠 소개</a></li>
-        <li><a href="resources.html">자료실</a></li>
-        <li><a href="community.html">커뮤니티</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main style="padding: 40px; text-align: center;">
-    <h1>콘텐츠 소개</h1>
-    <p>이 페이지는 현재 준비 중입니다.</p>
-  </main>
+  <div class="container">
+    <div class="intro">
+      <h1>우리는 콘텐츠를 이렇게 기획합니다</h1>
+      <p>
+        인터그레이트는 수학 교육의 본질에 주목합니다. 단순히 기존 개념을 재구성하는 것이 아닌,<br>
+        어떤 흐름으로 개념을 이해하게 할 것인지, 어떤 문항을 통해 사고를 유도할 것인지까지 직접 설계합니다.<br>
+        학생이 놓치기 쉬운 부분, 기존 교재에 없던 구성, 수능 출제자의 관점을 반영한 사고 흐름까지.<br>
+        이 모든 것을 교재에 담아내는 것이 우리의 콘텐츠 기획 방식입니다.
+      </p>
+    </div>
+
+    <section>
+      <div class="text">
+        <h2>한시수</h2>
+        <p>
+          한권으로 시작하는 수학, 한시수는 수학의 개념을 처음 배우는 학생을 위해 제작되었습니다.<br>
+          개념을 이해하기 쉽게 시각화하고, 직관적인 예시와 설명을 통해 학습의 첫걸음을 돕습니다.<br>
+          한시수는 단순한 암기가 아닌, 개념을 '이해하며 익히는 학습'을 실현합니다.
+        </p>
+      </div>
+      <div class="image">
+        <img src="hansisu.png" alt="한시수 이미지">
+      </div>
+    </section>
+
+    <section class="reverse">
+      <div class="text">
+        <h2>한완수</h2>
+        <p>
+          한권으로 완성하는 수학, 한완수는 수능을 대비한 개념 정리와 유형 연습을 위한 교재입니다.<br>
+          단순 암기식 개념서에서 벗어나, 문제 풀이와 연계된 개념 구조로 학습 흐름을 자연스럽게 이어줍니다.<br>
+          수능을 향한 가장 현실적인 실력 완성 교재입니다.
+        </p>
+      </div>
+      <div class="image">
+        <img src="hanwansu.png" alt="한완수 이미지">
+      </div>
+    </section>
+
+    <section>
+      <div class="text">
+        <h2>한완기</h2>
+        <p>
+          한권으로 완성하는 기출, 한완기는 수능 출제 경향을 반영하여 기출을 재구성한 기출 문제집입니다.<br>
+          최신 기조에 맞춘 문항을 우선 배치하고, Thema 개념서와 연계하여 실제 사고 흐름을 훈련할 수 있도록 설계했습니다.<br>
+          단순히 기출을 반복하는 것이 아니라, 기출을 통해 수능을 준비할 수 있도록 만든 실전형 교재입니다.
+        </p>
+      </div>
+      <div class="image">
+        <img src="hanwangi.png" alt="한완기 이미지">
+      </div>
+    </section>
+
+    <section class="reverse">
+      <div class="text">
+        <h2>이해원 N제</h2>
+        <p>
+          이해원 N제는 수능 실전 난이도와 유사한 고난도 문항으로 구성된 유형별 문제집입니다.<br>
+          단계별 풀이, 난이도 표시, 기출 연계 등 수능을 목표로 하는 수험생이 체계적으로 실력을 높일 수 있도록 설계되었습니다.<br>
+          실전 감각을 기르기에 최적화된 4점 실전 문제집입니다.
+        </p>
+      </div>
+      <div class="image">
+        <img src="nje.png" alt="이해원 N제 이미지">
+      </div>
+    </section>
+
+    <section>
+      <div class="text">
+        <h2>이해원 모의고사</h2>
+        <p>
+          실전과 가장 유사한 환경에서의 훈련을 위한 전국연합형 모의고사입니다.<br>
+          수능과 동일한 문항 구성과 시간 배치, 난이도 조절을 통해 실제 시험처럼 준비할 수 있도록 합니다.<br>
+          모의고사를 통해 약점을 분석하고, 실력을 점검하며, 실전 경험을 쌓을 수 있습니다.
+        </p>
+      </div>
+      <div class="image">
+        <img src="mock.png" alt="이해원 모의고사 이미지">
+      </div>
+    </section>
+
+    <section class="reverse">
+      <div class="text">
+        <h2>포만한</h2>
+        <p>
+          포만한은 '포기하지 마! 나는 할 수 있어!'의 줄임말로, 수포자를 위한 수학 입문서입니다.<br>
+          기초 개념부터 천천히, 쉽게 설명하며, 한 문제 한 문제를 해결해나갈 수 있도록 설계되었습니다.<br>
+          수학에 대한 두려움을 없애고, 다시 도전할 수 있는 자신감을 길러주는 교재입니다.
+        </p>
+      </div>
+      <div class="image">
+        <img src="pomanhan.png" alt="포만한 이미지">
+      </div>
+    </section>
+  </div>
 </body>
 </html>
+
