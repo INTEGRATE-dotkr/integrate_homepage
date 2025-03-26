@@ -63,7 +63,7 @@ header {
   border: 1px solid #e0e0e0;
   padding: 10px 0;
   min-width: 140px;
-  display: none; /* 처음에는 보이지 않도록 */
+  display: none;
   z-index: 999;
 }
 
@@ -86,6 +86,7 @@ header {
   font-size: 14px;
   transition: color 0.2s ease;
   text-decoration: none;
+  white-space: nowrap;  /* ✅ 한 줄로 표시되도록 추가 */
 }
 
 .dropdown-menu li a:hover {
@@ -118,13 +119,13 @@ main {
   .main-nav ul {
     gap: 20px;
   }
-  /* 모바일에서 드롭다운 메뉴는 상황에 따라 토글(햄버거)로 바꾸거나
-     그대로 펼쳐지게 할 수도 있음 */
+
   .dropdown-menu {
     position: static;
     border: none;
     padding: 0;
   }
+
   .main-nav ul li:hover .dropdown-menu {
     display: block;
   }
