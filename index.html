@@ -99,8 +99,8 @@
       flex-direction: column;
       text-align: center;
       opacity: 0;
-      transform: translateY(40px);
-      transition: all 1s ease;
+      transform: translateY(60px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
 
     .section.show {
@@ -171,10 +171,11 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
+          observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.3
+      threshold: 0.4
     });
 
     sections.forEach(section => {
@@ -183,3 +184,4 @@
   </script>
 </body>
 </html>
+
