@@ -113,20 +113,3 @@ main {
   margin-bottom: 16px;
   color: #444;
 }
-
-/* 반응형 예시 */
-@media (max-width: 768px) {
-  .main-nav ul {
-    gap: 20px;
-  }
-
-  .dropdown-menu {
-    position: static;
-    border: none;
-    padding: 0;
-  }
-
-  .main-nav ul li:hover .dropdown-menu {
-    display: block;
-  }
-}
