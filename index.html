@@ -16,26 +16,26 @@
     .navbar {
       background-color: #ffffff;
       border-bottom: 1px solid #e0e0e0;
-      padding: 15px 0;
+      padding: 24px 0; /* 헤더 높이 여유 있게 */
     }
 
     .navbar-container {
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      justify-content: center;
+      justify-content: center; /* 전체 중앙 정렬 */
       align-items: center;
       gap: 60px;
     }
 
-    .logo {
-      position: absolute;
-      left: 30px;
-      top: 15px;
+    .logo img {
+      height: 20px; /* 로고 크기 줄임 */
     }
 
-    .logo img {
-      height: 28px;
+    .nav-group {
+      display: flex;
+      align-items: center;
+      gap: 60px;
     }
 
     .nav-links {
@@ -137,24 +137,26 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">
-      <img src="integrate_logo1.png" alt="INTEGRATE 로고" />
-    </div>
     <div class="navbar-container">
-      <ul class="nav-links">
-        <li><a href="index.html">회사소개</a></li>
-        <li><a href="recruit.html">채용</a></li>
-        <li><a href="contents.html">콘텐츠</a></li>
-        <li class="dropdown">
-          <a href="resources.html">자료</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">정답표</a></li>
-            <li><a href="#">정오표</a></li>
-            <li><a href="#">선생님자료</a></li>
-          </ul>
-        </li>
-        <li><a href="gongmo.html">문항공모</a></li>
-      </ul>
+      <div class="nav-group">
+        <div class="logo">
+          <img src="integrate_logo1.png" alt="INTEGRATE 로고" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">회사소개</a></li>
+          <li><a href="recruit.html">채용</a></li>
+          <li><a href="contents.html">콘텐츠</a></li>
+          <li class="dropdown">
+            <a href="resources.html">자료</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">정답표</a></li>
+              <li><a href="#">정오표</a></li>
+              <li><a href="#">선생님자료</a></li>
+            </ul>
+          </li>
+          <li><a href="gongmo.html">문항공모</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -206,4 +208,3 @@
   </main>
 </body>
 </html>
-
