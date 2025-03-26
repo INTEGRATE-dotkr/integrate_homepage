@@ -61,7 +61,7 @@ header {
   border: 1px solid #e0e0e0;
   padding: 10px 0;
   min-width: 140px;
-  display: none;
+  display: none !important; /* ✅ 강제 숨김 처리 */
   z-index: 999;
 }
 
