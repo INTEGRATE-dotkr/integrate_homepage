@@ -37,12 +37,10 @@ header {
   padding: 0;
 }
 
-/* 상위 메뉴(li) 기본 */
 .main-nav ul li {
-  position: relative; /* 서브메뉴 절대 배치를 위해 position: relative */
+  position: relative;
 }
 
-/* 상위 메뉴 링크 */
 .main-nav ul li a {
   text-decoration: none;
   color: #222;
@@ -54,10 +52,10 @@ header {
   color: #7542b1;
 }
 
-/* 드롭다운 메뉴(하위 ul) 기본적으로 숨김 */
+/* 드롭다운 메뉴 */
 .dropdown-menu {
   position: absolute;
-  top: 100%; /* li 바로 아래 */
+  top: 100%;
   left: 0;
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
@@ -67,16 +65,8 @@ header {
   z-index: 999;
 }
 
-/* li 위에 마우스를 올렸을 때(dropdown-menu) 보이기 */
 .main-nav ul li:hover .dropdown-menu {
   display: block;
-}
-
-/* 드롭다운 메뉴 내부 항목 */
-.dropdown-menu li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .dropdown-menu li a {
@@ -86,7 +76,7 @@ header {
   font-size: 14px;
   transition: color 0.2s ease;
   text-decoration: none;
-  white-space: nowrap;  /* ✅ 한 줄로 표시되도록 추가 */
+  white-space: nowrap;
 }
 
 .dropdown-menu li a:hover {
@@ -101,15 +91,37 @@ main {
   text-align: left;
 }
 
-.intro h1 {
-  font-size: 26px;
+main section {
+  margin-bottom: 60px;
+}
+
+main h1 {
+  font-size: 28px;
   margin-bottom: 20px;
   color: #222;
 }
 
-.intro p {
+main h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+main p {
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 16px;
+  color: #444;
+}
+
+main ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+main li {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 8px;
   color: #444;
 }
