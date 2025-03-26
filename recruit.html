@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INTEGRATE 채용</title>
+  <title>인터그레이트 채용</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -93,21 +93,76 @@
       color: #444;
     }
 
-    .cta-button {
+    .job-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      width: 100%;
       margin-top: 24px;
-      padding: 12px 24px;
-      background-color: #7542b1;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 15px;
-      transition: background-color 0.2s ease;
     }
 
-    .cta-button:hover {
-      background-color: #5f3393;
+    .job-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+
+    .job-label {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 8px;
+    }
+
+    .job-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .job-type {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .job-d-day {
+      display: inline-block;
+      background-color: #7542b1;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .job-tags span {
+      display: inline-block;
+      background-color: #eee;
+      color: #444;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 13px;
+      margin: 4px 4px 0 0;
+    }
+
+    .faq-item {
+      text-align: left;
+      max-width: 700px;
+      margin-bottom: 32px;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .faq-a {
+      color: #444;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -116,19 +171,19 @@
     <div class="navbar-container">
       <div class="logo">
         <a href="index.html">
-          <img src="integrate_logo1.png" alt="INTEGRATE 로고">
+          <img src="integrate_logo1.png" alt="인터그레이트 로고">
         </a>
       </div>
       <ul class="nav-links">
         <li><a href="#home">홈</a></li>
         <li><a href="#office">오피스투어</a></li>
         <li><a href="#culture">문화</a></li>
-        <li><a href="#benefit">복지</a></li>
+        <li><a href="#welfare">복지</a></li>
         <li><a href="#jobs">채용공고</a></li>
         <li><a href="#faq">자주 묻는 질문</a></li>
-        </ul>
-      </div>
-    </nav>
+      </ul>
+    </div>
+  </nav>
 
   <main>
     <section class="section" id="home">
@@ -179,14 +234,17 @@
 
     <section class="section" id="welfare">
       <h2>복지</h2>
-      <p>인터그레이트는 구성원이 건강하고 안정적인 환경에서<br>몰입할 수 있도록 다양한 제도와 혜택을 운영하고 있습니다.</p>
       <ul>
-        <li><strong>자율 출퇴근제</strong><br>주 40시간 근무를 기준으로, 오전 11시~오후 5시 코어타임 중심의 자율 출퇴근제를 운영합니다. 매월 1회, 주 4일 근무도 가능합니다.</li>
-        <li><strong>쾌적한 업무 환경</strong><br>넓은 개인 데스크와 최고급 의자가 기본 제공되며, 언제든 이용 가능한 스탠바이미와 스피커도 비치되어 있습니다.</li>
-        <li><strong>복지와 소통 지원</strong><br>팀 커뮤니케이션을 위한 조직 운영비가 팀별로 지원되며, 상시 커뮤니케이션 이벤트도 함께 운영됩니다.</li>
-        <li><strong>건강 관리 및 휴식</strong><br>2년마다 종합 건강검진을 지원하며, 3년 이상 근속 시 리프레시 휴가를 제공합니다.</li>
-        <li><strong>생활 지원</strong><br>무제한 간식과 음료가 제공되는 스낵바, 생일 선물과 생일 반차, 각종 경조사 지원, 명절 선물(한우 세트)까지 구성원의 일상을 함께 챙깁니다.</li>
-        <li><strong>자사 교재 지원</strong><br>인터그레이트에서 제작한 모든 교재는 자유롭게 이용하실 수 있습니다.</li>
+        <li><strong>자율 출퇴근제</strong> – 오전 11시~오후 5시 코어타임, 월 1회 주 4일제</li>
+        <li><strong>쾌적한 사무공간</strong> – 허먼밀러 의자, 대형 데스크, 듀얼모니터 제공</li>
+        <li><strong>조직운영비</strong> – 팀별 운영비 상시 지원</li>
+        <li><strong>스낵바</strong> – 무제한 간식, 음료, 요청 가능</li>
+        <li><strong>건강검진</strong> – 2년마다 종합검진 지원</li>
+        <li><strong>리프레시 휴가</strong> – 3년 근속 시 제공</li>
+        <li><strong>생일반차/생일선물</strong></li>
+        <li><strong>명절선물</strong> – 한우세트 제공</li>
+        <li><strong>경조사 지원</strong></li>
+        <li><strong>자사 교재 자유 이용</strong></li>
       </ul>
     </section>
 
@@ -203,26 +261,7 @@
             <span>태그2</span>
           </div>
         </div>
-        <div class="job-card">
-          <div class="job-label">인터그레이트</div>
-          <h3 class="job-title">직무명 입력</h3>
-          <p class="job-type">고용 형태 | 지원 기간</p>
-          <div class="job-d-day">D-00</div>
-          <div class="job-tags">
-            <span>태그1</span>
-            <span>태그2</span>
-          </div>
-        </div>
-        <div class="job-card">
-          <div class="job-label">인터그레이트</div>
-          <h3 class="job-title">직무명 입력</h3>
-          <p class="job-type">고용 형태 | 지원 기간</p>
-          <div class="job-d-day">D-00</div>
-          <div class="job-tags">
-            <span>태그1</span>
-            <span>태그2</span>
-          </div>
-        </div>
+        <!-- 추가 채용공고 카드들 여기 -->
       </div>
     </section>
 
@@ -230,18 +269,31 @@
       <h2>자주 묻는 질문</h2>
       <div class="faq-item">
         <p class="faq-q"><strong>Q. 지원 방법은 어떻게 되나요?</strong></p>
-        <p class="faq-a">지원은 recruit@integrate.kr로 이력서와 포트폴리오를 보내주시면 됩니다.</p>
+        <p class="faq-a">이력서와 포트폴리오를 recruit@integrate.kr로 보내주세요.</p>
       </div>
       <div class="faq-item">
         <p class="faq-q"><strong>Q. 포트폴리오가 꼭 필요한가요?</strong></p>
-        <p class="faq-a">포지션에 따라 다르지만, 디자인/기획 직군은 포트폴리오 제출이 권장됩니다.</p>
+        <p class="faq-a">기획/디자인 직군은 제출을 권장합니다.</p>
       </div>
       <div class="faq-item">
-        <p class="faq-q"><strong>Q. 면접은 몇 차례 진행되나요?</strong></p>
-        <p class="faq-a">1차 실무 인터뷰와 2차 문화 적합성 인터뷰가 진행됩니다.</p>
+        <p class="faq-q"><strong>Q. 면접은 몇 차례인가요?</strong></p>
+        <p class="faq-a">실무 인터뷰 1회 + 문화 인터뷰 1회 진행됩니다.</p>
       </div>
     </section>
   </main>
+
+  <!-- 👇 JavaScript: Intersection Observer -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
 </body>
 </html>
-
