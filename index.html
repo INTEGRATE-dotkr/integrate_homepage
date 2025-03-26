@@ -16,26 +16,20 @@
     .navbar {
       background-color: #ffffff;
       border-bottom: 1px solid #e0e0e0;
-      padding: 24px 0; /* 헤더 높이 여유 있게 */
+      padding: 24px 0;
     }
 
     .navbar-container {
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      justify-content: center; /* 전체 중앙 정렬 */
+      justify-content: space-between;
       align-items: center;
-      gap: 60px;
+      padding: 0 40px;
     }
 
     .logo img {
-      height: 20px; /* 로고 크기 줄임 */
-    }
-
-    .nav-group {
-      display: flex;
-      align-items: center;
-      gap: 60px;
+      height: 20px;
     }
 
     .nav-links {
@@ -138,25 +132,23 @@
 <body>
   <nav class="navbar">
     <div class="navbar-container">
-      <div class="nav-group">
-        <div class="logo">
-          <img src="integrate_logo1.png" alt="INTEGRATE 로고" />
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.html">회사소개</a></li>
-          <li><a href="recruit.html">채용</a></li>
-          <li><a href="contents.html">콘텐츠</a></li>
-          <li class="dropdown">
-            <a href="resources.html">자료</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">정답표</a></li>
-              <li><a href="#">정오표</a></li>
-              <li><a href="#">선생님자료</a></li>
-            </ul>
-          </li>
-          <li><a href="gongmo.html">문항공모</a></li>
-        </ul>
+      <div class="logo">
+        <img src="integrate_logo1.png" alt="INTEGRATE 로고" />
       </div>
+      <ul class="nav-links">
+        <li><a href="index.html">회사소개</a></li>
+        <li><a href="recruit.html">채용</a></li>
+        <li><a href="contents.html">콘텐츠</a></li>
+        <li class="dropdown">
+          <a href="resources.html">자료</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">정답표</a></li>
+            <li><a href="#">정오표</a></li>
+            <li><a href="#">선생님자료</a></li>
+          </ul>
+        </li>
+        <li><a href="gongmo.html">문항공모</a></li>
+      </ul>
     </div>
   </nav>
 
